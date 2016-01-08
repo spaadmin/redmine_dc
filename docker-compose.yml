@@ -1,0 +1,13 @@
+redmine:
+  image: redmine
+  links:
+    - dbms:postgres
+  ports:
+    - "3000:3000"
+  volumes:
+    - /var/lib/redmine:/usr/src/redmine/files
+dbms:
+  image: postgress
+  environment:
+    - POSTGRES_PASSWORD=password
+    - POSTGRES_USER=redmine
