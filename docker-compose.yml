@@ -7,7 +7,7 @@ redmine:
   volumes:
     - /var/lib/redmine:/usr/src/redmine/files
 dbms:
-  image: postgress
+  image: postgres
   environment:
     - POSTGRES_PASSWORD=password
     - POSTGRES_USER=redmine
